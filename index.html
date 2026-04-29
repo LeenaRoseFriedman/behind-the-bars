@@ -35,12 +35,10 @@ section {
 
 h2 {
   color: red;
-  margin-bottom: 20px;
 }
 
 p {
   max-width: 750px;
-  margin: 15px 0;
   line-height: 1.7;
 }
 
@@ -49,7 +47,7 @@ p {
   color: red;
 }
 
-/* STORY */
+/* STORY SCROLL */
 .story {
   scroll-snap-type: y mandatory;
 }
@@ -65,7 +63,6 @@ p {
 
 .panel h2 {
   font-size: 3rem;
-  max-width: 800px;
   opacity: 0;
   transform: translateY(40px);
   transition: 0.6s;
@@ -74,10 +71,6 @@ p {
 .panel.active h2 {
   opacity: 1;
   transform: translateY(0);
-}
-
-.highlight h2 {
-  color: red;
 }
 
 /* MAP */
@@ -89,7 +82,6 @@ p {
 /* VIDEO */
 .video-wrapper {
   position: relative;
-  width: 100%;
   padding-top: 56.25%;
 }
 
@@ -99,22 +91,11 @@ p {
   height: 100%;
   border: none;
 }
-
-/* LIST STYLE */
-ul {
-  max-width: 700px;
-  margin-top: 20px;
-}
-
-li {
-  margin: 10px 0;
-}
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <section class="hero">
   <div>
     <h1>365 Days Outside</h1>
@@ -123,247 +104,82 @@ li {
   </div>
 </section>
 
-<!-- STORY -->
 <section class="story">
   <div class="panel"><h2>You are 12 years old.</h2></div>
   <div class="panel"><h2>Your parents struggle with addiction.</h2></div>
   <div class="panel"><h2>No one is guiding you.</h2></div>
   <div class="panel"><h2>Your environment teaches survival.</h2></div>
-  <div class="panel highlight"><h2>The system calls it criminal.</h2></div>
+  <div class="panel"><h2>The system calls it criminal.</h2></div>
 </section>
 
-<!-- THIS IS NOT RANDOM -->
 <section>
-  <h2>This is Not Random</h2>
-
-  <p>It is not individual decisions that cause people to end up in prison.</p>
-
-  <p>
-    People’s lives are shaped and targeted long before being arrested, by systemic inequalities, discrimination, instability, addiction in the home, and environments where survival is the main thing on one’s mind.
-  </p>
-
-  <p>After those conditions are solidified, the system steps in to intervene.</p>
-
-  <p>
-    Not to uplift those in need, provide rehabilitation or resources, but to punish the outcomes.
-  </p>
+<h2>This is Not Random</h2>
+<p>It is not individual decisions that cause people to end up in prison.</p>
+<p>People’s lives are shaped long before arrest through systemic inequality, instability, and survival environments.</p>
+<p>The system steps in not to fix conditions, but to punish outcomes.</p>
 </section>
 
-<!-- SYSTEM WORKS -->
 <section>
-  <h2>The System Works Exactly As Designed</h2>
-
-  <p>The United States has the highest incarceration rate in the world.</p>
-
-  <p>
-    The system was built on the idea of rehabilitation — but in reality, it functions as punishment, control, and removal.
-  </p>
-
-  <p>
-    People are sent to prison for survival behaviors, untreated mental health issues, addiction, and poverty.
-  </p>
-
-  <p class="big">“Nobody’s being corrected. It’s just the name.”</p>
-
-  <p class="big">
-    “Prison shouldn’t be the first line of defense. It should be the last.”
-  </p>
+<h2>The Scale</h2>
+<p>Over 2 million people are incarcerated in the United States.</p>
+<p>77% are rearrested within 5 years.</p>
+<p class="big">This is a cycle, not a solution.</p>
 </section>
 
-<!-- SCALE -->
 <section>
-  <h2>The Scale</h2>
-
-  <p>Over 2 million people are incarcerated in the United States.</p>
-
-  <p>77% are rearrested within 5 years.</p>
-
-  <p>If this system was working as rehabilitation, these numbers would not exist.</p>
-
-  <p class="big">This is a cycle, not a solution.</p>
+<h2>Where People Return</h2>
+<p>Reentry is concentrated in cities like New Haven, Bridgeport, and Hartford.</p>
+<div id="map"></div>
+<p style="font-size:0.8rem;color:#aaa;">Source: CT DOC (Releases by Town), Prison Policy Initiative</p>
 </section>
 
-<!-- WHY FAILS -->
 <section>
-  <h2>Why The Prison System Fails</h2>
-
-  <p><strong>1. It punishes instead of treating</strong><br>
-  Mental illness, trauma, and addiction are criminalized instead of addressed.</p>
-
-  <p><strong>2. It creates more harm</strong><br>
-  Solitary confinement, violence, and isolation increase long-term instability rather than rehabilitation.</p>
-
-  <p><strong>3. It blocks re-entry</strong><br>
-  People leave with records that prevent jobs, housing, and education.</p>
-
-  <p><strong>4. It targets specific communities</strong><br>
-  Over-policing and systemic inequality funnel certain populations into prison.</p>
+<h2>A Voice From Inside</h2>
+<p><strong>Edgardo Patron — Formerly incarcerated</strong></p>
+<p>“Each time I help someone stay out 365 days — that’s $100,000 the system doesn’t see…”</p>
 </section>
 
-<!-- MAP -->
-<!-- MAP SECTION -->
 <section>
-  <h2>Where People Return</h2>
+<h2>Listen</h2>
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/dV7u9pyWUHc" allowfullscreen></iframe>
+</div>
+</section>
 
-  <p>
-    Reentry is not equal. In Connecticut, incarceration and reentry are concentrated in a small number of cities — especially New Haven, Bridgeport, and Hartford.
-  </p>
+<section>
+<h2>Another Perspective</h2>
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/Ws1YXw8KnlQ" allowfullscreen></iframe>
+</div>
+</section>
 
-  <div id="map"></div>
+<section>
+<h2>Reintegration Is Public Safety</h2>
+<ul>
+<li>No stable housing</li>
+<li>Limited employment</li>
+<li>Stigma and surveillance</li>
+<li>No mental health support</li>
+</ul>
+<p class="big">Reintegration determines whether cycles continue.</p>
+</section>
 
-  <p style="margin-top:40px; font-size: 0.9rem; color: #aaa;">
-    Sources: Connecticut Department of Correction (Releases by Town), Prison Policy Initiative, Vera Institute of Justice
-  </p>
+<section>
+<h2>HangTime</h2>
+<p>HangTime brings together ex-offenders, leaders, and mentors into one community focused on growth and support.</p>
+</section>
+
+<section>
+<h2>The Question</h2>
+<p>When people return to society post-incarceration, how do we break the barriers and obstacles the system has built up?</p>
+<p class="big">What happens after prison determines everything.</p>
 </section>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 <script>
-// Initialize map centered on Connecticut
-const map = L.map('map').setView([41.5, -72.8], 9);
-
-// Base map
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
-
-// --- NEW HAVEN ---
-L.marker([41.3083, -72.9279]).addTo(map)
-  .bindPopup(`
-    <b>New Haven</b><br><br>
-    One of Connecticut’s highest reentry populations.<br>
-    Concentrated incarceration impact.<br><br>
-    Source: CT DOC (Releases by Town)
-  `);
-
-// --- BRIDGEPORT ---
-L.marker([41.1792, -73.1894]).addTo(map)
-  .bindPopup(`
-    <b>Bridgeport</b><br><br>
-    High incarceration + reentry concentration.<br><br>
-    Source: CT DOC, Prison Policy Initiative
-  `);
-
-// --- HARTFORD ---
-L.marker([41.7658, -72.6734]).addTo(map)
-  .bindPopup(`
-    <b>Hartford</b><br><br>
-    Major reentry hub tied to systemic inequality.<br><br>
-    Source: CT DOC, Vera Institute
-  `);
-
-// Optional visual emphasis (not data-specific, just highlight)
-L.circle([41.3083, -72.9279], {
-  radius: 2500,
-  color: 'red',
-  fillOpacity: 0.15
-}).addTo(map)
-  .bindPopup("New Haven: Highlighted reentry concentration");
-
-</script>
-
-<!-- VOICE -->
-<section>
-  <h2>A Voice From Inside</h2>
-
-  <p><strong>Edgardo Patron — Formerly incarcerated</strong></p>
-
-  <p>
-    “Each time I help someone stay out 365 days — that’s $100,000 the system doesn’t see. And if I teach that person to teach 10 other people, that’s 1 million dollars that they don’t see, and so on and so forth. And when they say, who’s hand is in my pocket? I’m gonna say, ‘Hey, the twelve year old boy you put in solitary confinement.’”
-  </p>
-
-  <p>
-    The system clearly isn’t meant for rehabilitation. Putting a 12-year-old boy, who grew up in a bad situation without the same opportunities as others, into solitary confinement isn’t protecting society — it’s targeting people who are already vulnerable.
-  </p>
-</section>
-
-<!-- VIDEO -->
-<section>
-  <h2>Listen</h2>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube.com/embed/dV7u9pyWUHc" allowfullscreen></iframe>
-  </div>
-</section>
-
-<section>
-  <h2>Another Perspective</h2>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube.com/embed/Ws1YXw8KnlQ" allowfullscreen></iframe>
-  </div>
-</section>
-
-<!-- REINTEGRATION -->
-<section>
-  <h2>Reintegration Is Public Safety</h2>
-
-  <p>
-    When people leave prison, they are expected to rebuild their lives immediately.
-  </p>
-
-  <p>
-    But how, when people who have been part of the prison system are treated as less than a person?
-  </p>
-
-  <ul>
-    <li>No stable housing</li>
-    <li>Limited employment opportunities</li>
-    <li>Stigma and surveillance</li>
-    <li>Little to no mental health support</li>
-  </ul>
-
-  <p>
-    Without support, the likelihood of returning to prison increases.
-  </p>
-
-  <p class="big">
-    Reintegration is not optional — it determines whether cycles continue.
-  </p>
-</section>
-
-<!-- HANGTIME -->
-<section>
-  <h2>HangTime</h2>
-
-  <p>
-    HangTime is a program made to bring together ex-offenders, community leaders, and legal professionals into one family, united by similar adversities, and focuses on empowering those involved.
-  </p>
-
-  <p>
-    The program is meant for those recovering from similar experiences, but anyone is welcome.
-  </p>
-
-  <p>
-    In my time there, I have never felt any less a part of the community than anyone there.
-  </p>
-
-  <p>
-    While being there, we learned about healthy habits for one's body, and it was so special sitting there learning all together, normalizing the importance of education for those who have never had the opportunity to learn in a safe and effective environment.
-  </p>
-
-  <p>
-    “Our programs are designed to provide support and guidance to the youth in our communities. Through mentorship and community engagement, we aim to create a positive impact and foster personal growth.”
-  </p>
-</section>
-
-<!-- FINAL -->
-<section>
-  <h2>The Question</h2>
-
-  <p>
-    When people return to society post-incarceration, how do we break the barriers and obstacles the system has built up?
-  </p>
-
-  <p class="big">
-    What happens after prison determines everything.
-  </p>
-</section>
-
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-<script>
-// STORY SCROLL
+// STORY SCROLL FIX
 const panels = document.querySelectorAll(".panel");
-
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -371,21 +187,16 @@ const observer = new IntersectionObserver(entries => {
     }
   });
 }, { threshold: 0.6 });
-
 panels.forEach(p => observer.observe(p));
 
-// MAP
-const map = L.map('map').setView([41.31, -72.92], 12);
+// MAP FIX (ONLY ONE INSTANCE)
+const map = L.map('map').setView([41.5, -72.8], 9);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
-L.circle([41.31, -72.92], { radius: 800, color: 'red' })
-  .addTo(map)
-  .bindPopup("High reentry pressure");
-
-L.circle([41.28, -72.95], { radius: 600, color: 'orange' })
-  .addTo(map)
-  .bindPopup("Limited support access");
+L.marker([41.3083, -72.9279]).addTo(map).bindPopup("New Haven — High reentry population");
+L.marker([41.1792, -73.1894]).addTo(map).bindPopup("Bridgeport — High incarceration concentration");
+L.marker([41.7658, -72.6734]).addTo(map).bindPopup("Hartford — Major reentry hub");
 </script>
 
 </body>
