@@ -201,15 +201,66 @@ li {
 </section>
 
 <!-- MAP -->
+<!-- MAP SECTION -->
 <section>
   <h2>Where People Return</h2>
 
   <p>
-    Reentry is not equal. Some communities are forced to carry the weight of this cycle more than others.
+    Reentry is not equal. In Connecticut, incarceration and reentry are concentrated in a small number of cities — especially New Haven, Bridgeport, and Hartford.
   </p>
 
   <div id="map"></div>
+
+  <p style="margin-top:40px; font-size: 0.9rem; color: #aaa;">
+    Sources: Connecticut Department of Correction (Releases by Town), Prison Policy Initiative, Vera Institute of Justice
+  </p>
 </section>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+// Initialize map centered on Connecticut
+const map = L.map('map').setView([41.5, -72.8], 9);
+
+// Base map
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+// --- NEW HAVEN ---
+L.marker([41.3083, -72.9279]).addTo(map)
+  .bindPopup(`
+    <b>New Haven</b><br><br>
+    One of Connecticut’s highest reentry populations.<br>
+    Concentrated incarceration impact.<br><br>
+    Source: CT DOC (Releases by Town)
+  `);
+
+// --- BRIDGEPORT ---
+L.marker([41.1792, -73.1894]).addTo(map)
+  .bindPopup(`
+    <b>Bridgeport</b><br><br>
+    High incarceration + reentry concentration.<br><br>
+    Source: CT DOC, Prison Policy Initiative
+  `);
+
+// --- HARTFORD ---
+L.marker([41.7658, -72.6734]).addTo(map)
+  .bindPopup(`
+    <b>Hartford</b><br><br>
+    Major reentry hub tied to systemic inequality.<br><br>
+    Source: CT DOC, Vera Institute
+  `);
+
+// Optional visual emphasis (not data-specific, just highlight)
+L.circle([41.3083, -72.9279], {
+  radius: 2500,
+  color: 'red',
+  fillOpacity: 0.15
+}).addTo(map)
+  .bindPopup("New Haven: Highlighted reentry concentration");
+
+</script>
 
 <!-- VOICE -->
 <section>
