@@ -91,6 +91,25 @@ p {
   height: 100%;
   border: none;
 }
+
+/* NEW STYLES */
+.quote {
+  font-style: italic;
+  margin-top: 30px;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.handwritten {
+  margin-top: 20px;
+  font-size: 1.6rem;
+  font-family: "Courier New", cursive;
+  color: white;
+}
+
+.list-section li {
+  margin-bottom: 15px;
+}
 </style>
 </head>
 
@@ -110,6 +129,42 @@ p {
   <div class="panel"><h2>No one is guiding you.</h2></div>
   <div class="panel"><h2>Your environment teaches survival.</h2></div>
   <div class="panel"><h2>The system calls it criminal.</h2></div>
+</section>
+
+<!-- NEW SECTION 1 -->
+<section>
+<h2>The System Works Exactly As Designed</h2>
+
+<p>The United States has the highest incarceration rate in the world. Over 2 million people are currently imprisoned.</p>
+
+<p>The system was built on the idea of rehabilitation—but in reality, it functions as punishment, control, and removal.</p>
+
+<p>People are sent to prison for survival behaviors, untreated mental health issues, addiction, and poverty.</p>
+
+<p class="quote">“Nobody’s being corrected. It’s just the name.”</p>
+
+<p class="handwritten">"Prison shouldn't be the first line of defense. It should be the last."</p>
+</section>
+
+<!-- NEW SECTION 2 -->
+<section class="list-section">
+<h2>Why the Prison System Fails</h2>
+
+<ol>
+<li><strong>It punishes instead of treating</strong><br>
+Mental illness, trauma, and addiction are criminalized instead of addressed.</li>
+
+<li><strong>It creates more harm</strong><br>
+Solitary confinement, violence, and isolation increase long-term instability.</li>
+
+<li><strong>It blocks reentry</strong><br>
+People leave with records that prevent jobs, housing, and education.</li>
+
+<li><strong>It targets specific communities</strong><br>
+Over-policing and systemic inequality funnel certain populations into prison.</li>
+</ol>
+
+<p class="handwritten">— rather than rehabilitation</p>
 </section>
 
 <section>
@@ -137,7 +192,7 @@ p {
 <h2>A Voice From Inside</h2>
 <p><strong>Edgardo Patron — Formerly incarcerated</strong></p>
 <p>“Each time I help someone stay out 365 days — that’s $100,000 the system doesn’t see. And if I teach that person to teach 10 other people, that's 1 million dollars that they don't see, and so on and so forth. And when they say, who's hand is in my pocket? I'm gonna say, "Hey, the twelve year old boy you put in solitary confinement."”</p>
-  <p> The system isn't meant for rehabilitation, putting a 12 year old boy who grew up in a bad situation, without the same opportunities as others, into solitary confinement, isn't protecting society, it's targetting minorities and people who are already vulnerable to systemic inequalities.</p>
+<p> The system isn't meant for rehabilitation, putting a 12 year old boy who grew up in a bad situation, without the same opportunities as others, into solitary confinement, isn't protecting society, it's targetting minorities and people who are already vulnerable to systemic inequalities.</p>
 </section>
 
 <section>
@@ -179,7 +234,6 @@ p {
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 <script>
-// STORY SCROLL FIX
 const panels = document.querySelectorAll(".panel");
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -190,7 +244,6 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.6 });
 panels.forEach(p => observer.observe(p));
 
-// MAP FIX (ONLY ONE INSTANCE)
 const map = L.map('map').setView([41.5, -72.8], 9);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
